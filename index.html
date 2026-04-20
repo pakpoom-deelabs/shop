@@ -3,517 +3,990 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>THE COLLECTION — ของสะสมพรีเมียม 3 ชิ้น</title>
-<meta name="description" content="ของสะสมคัดพิเศษ: ทะเบียนมงคล ฐก 455, BMW E30 คลาสสิก, พระสมเด็จวัดปากน้ำ" />
+<title>THE COLLECTION — ของสะสมพรีเมียม</title>
+<meta name="description" content="ของสะสมคัดพิเศษระดับพรีเมียม: ทะเบียนมงคล ฐก 455, BMW E30 1988, พระสมเด็จ — สำหรับผู้ที่เข้าใจคุณค่าของความหายาก" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
         fontFamily: {
-          serif: ['"Cormorant Garamond"','"Sarabun"','serif'],
-          sans: ['"DM Sans"','"Sarabun"','system-ui','sans-serif'],
-          thai: ['"Sarabun"','system-ui','sans-serif'],
+          display: ['"Playfair Display"', 'serif'],
+          body: ['Inter', '"Sarabun"', 'system-ui', 'sans-serif'],
+          thai: ['"Sarabun"', 'system-ui', 'sans-serif'],
         },
         colors: {
-          obsidian: '#0A0A0A',
-          ink: '#141414',
-          coal: '#1C1C1E',
-          gold: { 50:'#F5EEDF', 100:'#E8D9B4', 300:'#D4B87A', 400:'#C9A96E', 500:'#B8935A', 600:'#9A7B48', 700:'#7A6138' },
-          cream: '#F5F0E8',
-          bone: '#E8E2D4',
-          crimson: '#8B0000',
+          warm: '#FAFAF7',
+          charcoal: { DEFAULT: '#1C1C1C', light: '#2D2D2D', soft: '#4A4A4A', muted: '#8A8A8A' },
+          gold: { DEFAULT: '#C9A96E', light: '#E8D9B4', dark: '#9A7B48', deep: '#7A6138', pale: '#F5EDD8' },
           line: '#06C755',
+        },
+        animation: {
+          'fade-up': 'fadeUp 0.8s ease forwards',
+          'marquee': 'marquee 40s linear infinite',
+        },
+        keyframes: {
+          fadeUp: { from: { opacity: '0', transform: 'translateY(32px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+          marquee: { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },
         },
       },
     },
   };
 </script>
 <style>
-  html { scroll-behavior: smooth; background:#0A0A0A; }
-  body { font-family:'DM Sans','Sarabun',system-ui,sans-serif; background:#0A0A0A; color:#F5F0E8; overflow-x:hidden; }
-  .font-serif { font-family:'Cormorant Garamond','Sarabun',serif; }
-  .font-thai { font-family:'Sarabun',system-ui,sans-serif; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', 'Sarabun', system-ui, sans-serif; background: #FAFAF7; color: #1C1C1C; overflow-x: hidden; }
 
-  /* gold gradient text */
+  .font-display { font-family: 'Playfair Display', serif; }
+  .font-thai { font-family: 'Sarabun', system-ui, sans-serif; }
+
+  /* Gold gradient text */
   .gold-text {
-    background: linear-gradient(135deg, #E8D9B4 0%, #C9A96E 40%, #9A7B48 70%, #D4B87A 100%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .gold-line { background: linear-gradient(90deg, transparent 0%, #C9A96E 50%, transparent 100%); }
-
-  /* film grain overlay */
-  .grain::before {
-    content:''; position:fixed; inset:0; pointer-events:none; z-index:100; opacity:.04;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background: linear-gradient(135deg, #C9A96E 0%, #9A7B48 50%, #C9A96E 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   }
 
-  /* reveal animation */
-  .reveal { opacity:0; transform:translateY(40px); transition:opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1); }
-  .reveal.in { opacity:1; transform:translateY(0); }
-  .reveal-delay-1 { transition-delay:.15s; }
-  .reveal-delay-2 { transition-delay:.3s; }
-  .reveal-delay-3 { transition-delay:.45s; }
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2,.8,.2,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-1 { transition-delay: 0.1s; }
+  .reveal-2 { transition-delay: 0.2s; }
+  .reveal-3 { transition-delay: 0.35s; }
+  .reveal-4 { transition-delay: 0.5s; }
 
-  /* image hover zoom */
-  .zoom-wrap { overflow:hidden; }
-  .zoom-wrap img, .zoom-wrap .zoom-target { transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
-  .zoom-wrap:hover .zoom-target { transform: scale(1.06); }
-
-  /* marquee */
-  @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  /* Marquee */
   .marquee-track { animation: marquee 40s linear infinite; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* ornament divider */
-  .ornament { display:flex; align-items:center; gap:1rem; color:#C9A96E; }
-  .ornament::before, .ornament::after { content:''; flex:1; height:1px; background:linear-gradient(90deg, transparent, #9A7B48, transparent); }
-
-  /* oversized display text */
-  .display-xl { font-size: clamp(3.5rem, 10vw, 10rem); line-height: .9; letter-spacing: -0.02em; }
-  .display-lg { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; letter-spacing: -0.015em; }
-
-  /* section full viewport */
-  .vh-section { min-height: 100vh; display:flex; align-items:center; }
-
-  /* gold frame */
-  .gold-frame { border:1px solid rgba(201,169,110,.25); }
-  .gold-frame-strong { border:1px solid rgba(201,169,110,.5); }
-
-  /* number tag */
-  .num-tag { font-variant-numeric: tabular-nums; letter-spacing: .2em; }
-
-  /* product hover glow */
-  .product-stage { position:relative; }
-  .product-stage::after {
-    content:''; position:absolute; inset:-20% -10% -10% -10%; z-index:-1;
-    background: radial-gradient(ellipse at center, rgba(201,169,110,.18) 0%, transparent 60%);
-    opacity:0; transition: opacity 1s ease;
+  /* Product card gradients */
+  .card-plate {
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 30%, #0f3460 60%, #533483 100%);
   }
-  .product-stage:hover::after { opacity:1; }
+  .card-bmw {
+    background: linear-gradient(145deg, #1c2b3a 0%, #2d4a6b 40%, #1e3a5f 70%, #0d2137 100%);
+  }
+  .card-amulet {
+    background: linear-gradient(145deg, #2d1b0e 0%, #5c3317 30%, #8b5e3c 60%, #c9a96e 100%);
+  }
 
-  /* scroll hint */
-  @keyframes bounce-slow { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(8px); } }
-  .scroll-hint { animation: bounce-slow 2.5s ease-in-out infinite; }
+  /* Gold divider */
+  .gold-divider { height: 1px; background: linear-gradient(90deg, transparent, #C9A96E, transparent); }
 
-  /* custom scrollbar */
-  ::-webkit-scrollbar { width:8px; }
-  ::-webkit-scrollbar-track { background:#0A0A0A; }
-  ::-webkit-scrollbar-thumb { background:#9A7B48; border-radius:4px; }
+  /* Soft shadow card */
+  .card-shadow { box-shadow: 0 4px 24px rgba(28,28,28,.06), 0 1px 4px rgba(28,28,28,.04); }
+  .card-hover { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+  .card-hover:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(28,28,28,.1), 0 4px 12px rgba(201,169,110,.12); }
+
+  /* Gold button */
+  .btn-gold {
+    background: #C9A96E; color: #fff;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-gold:hover { background: #9A7B48; transform: translateY(-1px); }
+
+  .btn-outline {
+    border: 1.5px solid #C9A96E; color: #9A7B48;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { background: #C9A96E; color: #fff; }
+
+  /* FAQ accordion */
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+  .faq-answer.open { max-height: 300px; }
+  .faq-icon { transition: transform 0.3s ease; }
+  .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+  /* Floating buttons */
+  .float-btn { transition: transform 0.2s, box-shadow 0.2s; }
+  .float-btn:hover { transform: scale(1.06); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+  /* Nav glass */
+  .nav-glass {
+    background: rgba(250,250,247,0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(201,169,110,.15);
+  }
+
+  /* Section heading decoration */
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #C9A96E;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #FAFAF7; }
+  ::-webkit-scrollbar-thumb { background: #C9A96E; border-radius: 3px; }
+
+  /* Number circle */
+  .step-num {
+    width: 52px; height: 52px;
+    border: 1.5px solid #C9A96E;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #C9A96E;
+    flex-shrink: 0;
+  }
+
+  /* Price tag */
+  .price-badge {
+    background: linear-gradient(135deg, #C9A96E, #9A7B48);
+    color: white;
+    padding: 4px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  /* Trust icon ring */
+  .trust-icon {
+    width: 64px; height: 64px;
+    background: #F5EDD8;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
 </style>
 </head>
-<body class="grain">
+<body>
 
-<!-- FIXED NAV -->
-<header class="fixed top-0 left-0 right-0 z-50">
-  <div class="bg-gradient-to-b from-obsidian via-obsidian/80 to-transparent">
-    <div class="max-w-[1400px] mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-10 h-10 gold-frame-strong rounded-full flex items-center justify-center">
-          <span class="font-serif italic text-gold-300 text-xl">M</span>
-        </div>
-        <div class="leading-tight">
-          <div class="font-serif text-gold-300 text-lg tracking-[0.25em]">MONGKOL</div>
-          <div class="text-[9px] text-cream/50 tracking-[0.3em] -mt-1">— THE COLLECTION —</div>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-10 text-[11px] tracking-[0.25em] text-cream/70 uppercase">
-        <a href="#intro" class="hover:text-gold-300 transition">Intro</a>
-        <a href="#p01" class="hover:text-gold-300 transition">01 · Plate</a>
-        <a href="#p02" class="hover:text-gold-300 transition">02 · Motor</a>
-        <a href="#p03" class="hover:text-gold-300 transition">03 · Amulet</a>
-        <a href="#contact" class="hover:text-gold-300 transition">Enquire</a>
-      </nav>
-      <a href="tel:0812345678" class="hidden sm:inline-flex items-center gap-2 gold-frame-strong text-gold-300 px-4 py-2 rounded-full text-[11px] tracking-[0.2em] uppercase hover:bg-gold-400 hover:text-obsidian transition">
-        <i data-lucide="phone" class="w-3.5 h-3.5"></i> 081 234 5678
-      </a>
-    </div>
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<header class="fixed top-0 left-0 right-0 z-50 nav-glass">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2.5">
+      <div class="w-8 h-8 bg-charcoal rounded-full flex items-center justify-center">
+        <span class="font-display italic text-gold text-base">T</span>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-charcoal tracking-[0.18em] text-sm font-semibold">THE COLLECTION</div>
+        <div class="text-[9px] text-charcoal-muted tracking-[0.25em] uppercase -mt-0.5">ของสะสมพรีเมียม</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8 text-[12px] font-medium tracking-[0.12em] text-charcoal-soft">
+      <a href="#story" class="hover:text-gold transition-colors">เรื่องราว</a>
+      <a href="#products" class="hover:text-gold transition-colors">สินค้า</a>
+      <a href="#trust" class="hover:text-gold transition-colors">ความน่าเชื่อถือ</a>
+      <a href="#how-to-buy" class="hover:text-gold transition-colors">วิธีซื้อ</a>
+      <a href="#faq" class="hover:text-gold transition-colors">คำถาม</a>
+    </nav>
+
+    <!-- CTA -->
+    <a href="#contact" class="btn-gold px-5 py-2.5 rounded-full text-[11px] font-semibold tracking-[0.15em] uppercase">
+      ติดต่อเรา
+    </a>
   </div>
 </header>
 
-<!-- HERO / INTRO -->
-<section id="intro" class="vh-section relative overflow-hidden pt-20">
-  <!-- background gradient -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,#1C1C1E_0%,#0A0A0A_60%)]"></div>
-  <!-- subtle gold ornament -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140vh] h-[140vh] rounded-full border border-gold-600/10"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vh] h-[100vh] rounded-full border border-gold-600/5"></div>
 
-  <div class="relative max-w-[1400px] mx-auto px-6 md:px-10 w-full">
-    <div class="max-w-4xl">
-      <div class="reveal ornament mb-10 tracking-[0.3em] text-xs uppercase">
-        <span>Private Collection · Est. 2026</span>
-      </div>
-      <h1 class="reveal reveal-delay-1 font-serif display-xl text-cream">
-        The<br /><span class="gold-text italic">Collection</span>
-      </h1>
-      <div class="reveal reveal-delay-2 mt-8 max-w-xl">
-        <div class="w-16 h-px bg-gold-400 mb-6"></div>
-        <p class="font-thai text-cream/70 text-lg leading-relaxed">
-          ของสะสมคัดพิเศษ <span class="text-gold-300">สามชิ้น</span> สำหรับผู้ที่เข้าใจคุณค่าของความหายาก
-          — ทะเบียนมงคลเลขเด็ด, รถคลาสสิกในตำนาน, และพระเครื่องเลี่ยมทององค์งาม
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero" class="min-h-screen flex flex-col justify-center pt-20 pb-16 px-5 md:px-8 relative overflow-hidden">
+  <!-- Subtle background texture -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-20"
+         style="background: radial-gradient(circle, #E8D9B4 0%, transparent 70%); transform: translate(30%, -30%);"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10"
+         style="background: radial-gradient(circle, #C9A96E 0%, transparent 70%); transform: translate(-40%, 40%);"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto w-full">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left: text -->
+      <div>
+        <p class="reveal section-label mb-5">Private Collection · Est. 2026</p>
+
+        <h1 class="reveal reveal-1 font-display text-charcoal leading-[1.08]" style="font-size: clamp(2.8rem, 7vw, 5.5rem);">
+          ของสะสม<br />
+          <em class="gold-text not-italic">ระดับพรีเมียม</em>
+        </h1>
+
+        <div class="reveal reveal-2 w-16 h-px bg-gold mt-8 mb-6"></div>
+
+        <p class="reveal reveal-2 font-thai text-charcoal-soft text-lg leading-relaxed max-w-md">
+          คัดสรรของสะสมมงคลสามชิ้น สำหรับผู้ที่เข้าใจ<br class="hidden md:block" />
+          คุณค่าของความหายากและความงามที่ไม่ซ้ำใคร
         </p>
-      </div>
-      <div class="reveal reveal-delay-3 mt-10 flex flex-wrap gap-4 items-center">
-        <a href="#p01" class="inline-flex items-center gap-3 bg-gold-400 text-obsidian px-8 py-4 rounded-full text-xs tracking-[0.25em] uppercase font-medium hover:bg-gold-300 transition">
-          View Collection <i data-lucide="arrow-down" class="w-4 h-4"></i>
-        </a>
-        <a href="#contact" class="inline-flex items-center gap-3 gold-frame-strong text-cream px-8 py-4 rounded-full text-xs tracking-[0.25em] uppercase hover:bg-cream hover:text-obsidian transition">
-          Private Enquiry
-        </a>
-      </div>
-    </div>
 
-    <!-- stats row -->
-    <div class="reveal reveal-delay-3 absolute bottom-10 left-6 md:left-10 right-6 md:right-10 grid grid-cols-3 gap-6 pt-8 border-t border-gold-600/20 max-w-[1400px]">
-      <div>
-        <div class="num-tag text-gold-400 text-xs tracking-[0.3em]">N° 01</div>
-        <div class="font-serif text-cream text-xl mt-1">Lucky Plate</div>
-        <div class="text-cream/40 text-xs font-thai mt-0.5">ทะเบียนมงคล</div>
+        <div class="reveal reveal-3 mt-10 flex flex-wrap gap-3">
+          <a href="#products" class="btn-gold px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide">
+            ดูของสะสม
+          </a>
+          <a href="#contact" class="btn-outline px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide">
+            สอบถามราคา
+          </a>
+        </div>
+
+        <!-- Mini stats -->
+        <div class="reveal reveal-4 mt-12 flex gap-8">
+          <div>
+            <div class="font-display text-2xl font-bold text-charcoal">3</div>
+            <div class="text-xs text-charcoal-muted font-thai mt-0.5">ชิ้นพิเศษ</div>
+          </div>
+          <div class="w-px bg-gold/30"></div>
+          <div>
+            <div class="font-display text-2xl font-bold text-charcoal">100%</div>
+            <div class="text-xs text-charcoal-muted font-thai mt-0.5">รับประกันแท้</div>
+          </div>
+          <div class="w-px bg-gold/30"></div>
+          <div>
+            <div class="font-display text-2xl font-bold text-charcoal">24/7</div>
+            <div class="text-xs text-charcoal-muted font-thai mt-0.5">ตอบทุกวัน</div>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="num-tag text-gold-400 text-xs tracking-[0.3em]">N° 02</div>
-        <div class="font-serif text-cream text-xl mt-1">BMW E30</div>
-        <div class="text-cream/40 text-xs font-thai mt-0.5">รถคลาสสิก</div>
-      </div>
-      <div>
-        <div class="num-tag text-gold-400 text-xs tracking-[0.3em]">N° 03</div>
-        <div class="font-serif text-cream text-xl mt-1">Sacred Amulet</div>
-        <div class="text-cream/40 text-xs font-thai mt-0.5">พระสมเด็จ</div>
+
+      <!-- Right: decorative cards stack -->
+      <div class="reveal reveal-2 hidden md:block">
+        <div class="relative w-full aspect-[4/3]">
+          <!-- Card 3 (back) -->
+          <div class="absolute inset-0 rounded-2xl card-amulet opacity-40"
+               style="transform: rotate(6deg) scale(0.9); top: 5%; left: 5%; right: 5%; bottom: 5%;"></div>
+          <!-- Card 2 (middle) -->
+          <div class="absolute inset-0 rounded-2xl card-bmw opacity-60"
+               style="transform: rotate(3deg) scale(0.95); top: 3%; left: 3%; right: 3%; bottom: 3%;"></div>
+          <!-- Card 1 (front) -->
+          <div class="absolute inset-0 rounded-2xl card-plate flex items-center justify-center"
+               style="top: 0; box-shadow: 0 24px 80px rgba(0,0,0,.18);">
+            <div class="text-center">
+              <div class="bg-white/95 rounded-xl px-10 py-7 shadow-lg">
+                <div class="font-display font-bold text-5xl text-charcoal tracking-widest">ฐก 455</div>
+                <div class="text-xs text-charcoal-muted mt-2 font-thai tracking-widest">ทะเบียนมงคล · กรุงเทพฯ</div>
+              </div>
+              <div class="mt-5">
+                <span class="price-badge">฿ 1,900,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 scroll-hint text-gold-400/60">
-    <i data-lucide="chevron-down" class="w-5 h-5"></i>
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-charcoal-muted">
+    <span class="text-[10px] tracking-[0.3em] uppercase">เลื่อนลง</span>
+    <div class="w-px h-12 bg-gradient-to-b from-gold/60 to-transparent"></div>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="py-5 border-y border-gold-600/20 bg-coal overflow-hidden">
+
+<!-- ═══════════════════════════════════════════
+     MARQUEE STRIP
+═══════════════════════════════════════════ -->
+<div class="border-y border-gold/20 bg-gold-pale overflow-hidden py-4">
   <div class="flex whitespace-nowrap marquee-track">
-    <div class="flex items-center gap-12 text-gold-300/70 font-serif italic text-2xl px-6">
-      <span>Private Collection</span><span class="text-gold-600">✦</span>
-      <span>ของแท้ คัดพิเศษ</span><span class="text-gold-600">✦</span>
-      <span>By Appointment Only</span><span class="text-gold-600">✦</span>
-      <span>ติดต่อโดยตรง</span><span class="text-gold-600">✦</span>
-      <span>Rare Finds</span><span class="text-gold-600">✦</span>
-      <span>ของสะสมมงคล</span><span class="text-gold-600">✦</span>
+    <div class="flex items-center gap-10 px-6 text-charcoal-soft">
+      <span class="font-display italic text-xl">ของแท้ รับประกัน</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">Private Collection</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">ชิ้นเดียวในโลก</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">Rare &amp; Exclusive</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">สะสมมงคล</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">ติดต่อโดยตรง</span>
+      <span class="text-gold text-xl">✦</span>
     </div>
-    <div class="flex items-center gap-12 text-gold-300/70 font-serif italic text-2xl px-6" aria-hidden="true">
-      <span>Private Collection</span><span class="text-gold-600">✦</span>
-      <span>ของแท้ คัดพิเศษ</span><span class="text-gold-600">✦</span>
-      <span>By Appointment Only</span><span class="text-gold-600">✦</span>
-      <span>ติดต่อโดยตรง</span><span class="text-gold-600">✦</span>
-      <span>Rare Finds</span><span class="text-gold-600">✦</span>
-      <span>ของสะสมมงคล</span><span class="text-gold-600">✦</span>
+    <div class="flex items-center gap-10 px-6 text-charcoal-soft" aria-hidden="true">
+      <span class="font-display italic text-xl">ของแท้ รับประกัน</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">Private Collection</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">ชิ้นเดียวในโลก</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">Rare &amp; Exclusive</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">สะสมมงคล</span>
+      <span class="text-gold text-xl">✦</span>
+      <span class="font-display italic text-xl">ติดต่อโดยตรง</span>
+      <span class="text-gold text-xl">✦</span>
     </div>
   </div>
 </div>
 
-<!-- PRODUCT 01 — PLATE -->
-<section id="p01" class="vh-section relative py-24">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 w-full grid lg:grid-cols-12 gap-12 items-center">
-    <!-- left: label + title -->
-    <div class="lg:col-span-5">
-      <div class="reveal num-tag text-gold-400 text-xs tracking-[0.3em] mb-4">N° 01 / LUCKY PLATE</div>
-      <h2 class="reveal reveal-delay-1 font-serif display-lg text-cream">
-        เลขศาสตร์<br /><span class="gold-text italic">รุ่งเรือง</span>
-      </h2>
-      <div class="reveal reveal-delay-1 w-24 h-px bg-gold-400 mt-8"></div>
-      <p class="reveal reveal-delay-2 mt-6 font-thai text-cream/70 leading-relaxed max-w-md">
-        ทะเบียนมงคลหมวด <span class="text-gold-300">ฐก 455</span> จังหวัดกรุงเทพมหานคร
-        ผลรวม 14 ตามตำราโหราศาสตร์ หมายถึงความเจริญรุ่งเรือง
-        การงานก้าวหน้า เสริมบารมีผู้บริหาร
-      </p>
 
-      <!-- attributes -->
-      <dl class="reveal reveal-delay-2 mt-10 grid grid-cols-3 gap-px bg-gold-600/20 gold-frame rounded">
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Sum</dt>
-          <dd class="font-serif text-3xl text-gold-300 mt-1">14</dd>
-        </div>
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Series</dt>
-          <dd class="font-serif text-3xl text-cream mt-1">ฐก</dd>
-        </div>
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Number</dt>
-          <dd class="font-serif text-3xl text-cream mt-1">455</dd>
-        </div>
-      </dl>
-
-      <div class="reveal reveal-delay-3 mt-10 flex items-end gap-6 flex-wrap">
-        <div>
-          <div class="text-[10px] tracking-[0.3em] text-cream/40 uppercase">Price</div>
-          <div class="font-serif display-lg gold-text leading-none">฿1.9M</div>
-          <div class="text-cream/50 text-sm mt-1 font-thai">฿1,900,000</div>
-        </div>
-        <a href="https://line.me/ti/p/~deelabs" class="inline-flex items-center gap-2 bg-gold-400 text-obsidian px-7 py-3.5 rounded-full text-xs tracking-[0.25em] uppercase font-medium hover:bg-gold-300 transition">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/></svg>
-          Enquire
-        </a>
-      </div>
-    </div>
-
-    <!-- right: product stage -->
-    <div class="lg:col-span-7 product-stage">
-      <div class="reveal reveal-delay-2 relative aspect-[5/4] zoom-wrap">
-        <!-- velvet pedestal -->
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1C1C1E_0%,#0A0A0A_80%)] rounded"></div>
-        <div class="absolute inset-10 gold-frame rounded"></div>
-        <!-- plate -->
-        <div class="absolute inset-0 flex items-center justify-center zoom-target">
-          <div class="bg-cream border-[3px] border-obsidian/90 rounded-xl px-12 py-8 shadow-[0_20px_80px_-20px_rgba(201,169,110,.5)]">
-            <div class="font-serif font-bold text-7xl md:text-8xl text-obsidian tracking-wider">ฐก 455</div>
-            <div class="text-sm text-obsidian/70 text-center mt-3 font-thai">กรุงเทพมหานคร</div>
+<!-- ═══════════════════════════════════════════
+     BRAND STORY
+═══════════════════════════════════════════ -->
+<section id="story" class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <!-- Left: decorative element -->
+      <div class="reveal order-2 md:order-1">
+        <div class="relative">
+          <!-- Large quote mark -->
+          <div class="font-display text-[12rem] leading-none text-gold/10 select-none absolute -top-12 -left-4">"</div>
+          <!-- Story card -->
+          <div class="relative bg-white rounded-2xl card-shadow p-10 md:p-12">
+            <div class="gold-divider mb-8"></div>
+            <p class="font-display italic text-xl md:text-2xl text-charcoal leading-relaxed font-medium">
+              "Quality is remembered long after the price is forgotten."
+            </p>
+            <div class="gold-divider mt-8 mb-8"></div>
+            <!-- Small grid of highlights -->
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div class="font-display text-2xl font-bold gold-text">15+</div>
+                <div class="text-xs font-thai text-charcoal-muted mt-1">ปีประสบการณ์</div>
+              </div>
+              <div>
+                <div class="font-display text-2xl font-bold gold-text">500+</div>
+                <div class="text-xs font-thai text-charcoal-muted mt-1">ชิ้นที่ผ่านมือ</div>
+              </div>
+              <div>
+                <div class="font-display text-2xl font-bold gold-text">100%</div>
+                <div class="text-xs font-thai text-charcoal-muted mt-1">ลูกค้าพึงพอใจ</div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- corner marks -->
-        <div class="absolute top-4 left-4 w-6 h-6 border-l border-t border-gold-400"></div>
-        <div class="absolute top-4 right-4 w-6 h-6 border-r border-t border-gold-400"></div>
-        <div class="absolute bottom-4 left-4 w-6 h-6 border-l border-b border-gold-400"></div>
-        <div class="absolute bottom-4 right-4 w-6 h-6 border-r border-b border-gold-400"></div>
       </div>
-      <div class="reveal reveal-delay-3 mt-4 flex justify-between text-[10px] tracking-[0.25em] text-cream/40 uppercase">
-        <span>Thailand · Bangkok</span>
-        <span>DLT Verified</span>
+
+      <!-- Right: text -->
+      <div class="order-1 md:order-2">
+        <p class="reveal section-label mb-4">เรื่องราวของเรา</p>
+        <h2 class="reveal reveal-1 font-display text-charcoal leading-tight mb-6"
+            style="font-size: clamp(2rem, 4vw, 3rem);">
+          คัดสรรเพื่อคนที่รู้<br />
+          <em class="gold-text not-italic">คุณค่าของความหายาก</em>
+        </h2>
+        <div class="reveal reveal-2 space-y-4 font-thai text-charcoal-soft text-base leading-relaxed">
+          <p>
+            THE COLLECTION ก่อตั้งโดยผู้ที่หลงใหลในของสะสมมากกว่า 15 ปี เราเชื่อว่าของสะสมที่แท้จริง
+            ไม่ใช่แค่วัตถุ — แต่คือเรื่องราว พลังงาน และคุณค่าที่ส่งต่อจากรุ่นสู่รุ่น
+          </p>
+          <p>
+            ทุกชิ้นที่เราคัดเลือกผ่านการตรวจสอบความแท้จริงอย่างละเอียด
+            พร้อมเอกสารรับรองและประกันคืนเงินหากไม่พอใจ
+          </p>
+          <p class="text-charcoal font-medium">
+            วันนี้เราขอนำเสนอคอลเล็กชันพิเศษ 3 ชิ้น ที่รอเจ้าของคนใหม่ผู้เหมาะสม
+          </p>
+        </div>
+        <div class="reveal reveal-3 mt-8">
+          <a href="#products" class="btn-outline inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold">
+            ดูของสะสมทั้งหมด
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCT 02 — BMW E30 -->
-<section id="p02" class="vh-section relative py-24 bg-coal">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,#1A1A2E_0%,#0A0A0A_70%)]"></div>
-  <div class="relative max-w-[1400px] mx-auto px-6 md:px-10 w-full grid lg:grid-cols-12 gap-12 items-center">
-    <!-- product on left -->
-    <div class="lg:col-span-7 lg:order-1 product-stage">
-      <div class="reveal reveal-delay-1 relative aspect-[5/4] zoom-wrap">
-        <!-- real photo from Wikimedia Commons (CC BY-SA) -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/BMW_E30.JPG"
-             alt="BMW E30 Classic"
-             loading="lazy"
-             class="absolute inset-0 w-full h-full object-cover zoom-target" />
-        <div class="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-obsidian/30"></div>
-        <div class="absolute inset-10 gold-frame rounded pointer-events-none"></div>
-        <div class="absolute top-4 left-4 w-6 h-6 border-l border-t border-gold-400"></div>
-        <div class="absolute top-4 right-4 w-6 h-6 border-r border-t border-gold-400"></div>
-        <div class="absolute bottom-4 left-4 w-6 h-6 border-l border-b border-gold-400"></div>
-        <div class="absolute bottom-4 right-4 w-6 h-6 border-r border-b border-gold-400"></div>
-      </div>
-      <div class="reveal reveal-delay-3 mt-4 flex justify-between text-[10px] tracking-[0.25em] text-cream/40 uppercase">
-        <span>Germany · 1988</span>
-        <span>Matching Numbers</span>
-      </div>
-    </div>
 
-    <!-- right: text -->
-    <div class="lg:col-span-5 lg:order-2">
-      <div class="reveal num-tag text-gold-400 text-xs tracking-[0.3em] mb-4">N° 02 / THE MOTOR</div>
-      <h2 class="reveal reveal-delay-1 font-serif display-lg text-cream">
-        BMW <span class="gold-text italic">E30</span>
+<!-- ═══════════════════════════════════════════
+     PRODUCT SHOWCASE
+═══════════════════════════════════════════ -->
+<section id="products" class="py-24 md:py-32 px-5 md:px-8 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <p class="reveal section-label mb-4">คอลเล็กชันพิเศษ</p>
+      <h2 class="reveal reveal-1 font-display text-charcoal mb-4" style="font-size: clamp(2rem, 4vw, 3rem);">
+        สามชิ้นที่<em class="gold-text not-italic"> รอคุณ</em>
       </h2>
-      <div class="reveal reveal-delay-1 w-24 h-px bg-gold-400 mt-8"></div>
-      <p class="reveal reveal-delay-2 mt-6 font-thai text-cream/70 leading-relaxed max-w-md">
-        รถในตำนานจากปี 1988 ที่นักสะสมทั่วโลกตามหา
-        สภาพเดิมจากโรงงาน เครื่องยนต์ไม่เคยยก
-        เอกสารและคู่มือครบชุด เหมาะสำหรับคนรักรถคลาสสิกตัวจริง
-      </p>
+      <div class="reveal reveal-2 gold-divider max-w-24 mx-auto"></div>
+    </div>
 
-      <dl class="reveal reveal-delay-2 mt-10 grid grid-cols-2 gap-px bg-gold-600/20 gold-frame rounded">
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Year</dt>
-          <dd class="font-serif text-2xl text-cream mt-1">1988</dd>
-        </div>
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Origin</dt>
-          <dd class="font-serif text-2xl text-cream mt-1">München</dd>
-        </div>
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Condition</dt>
-          <dd class="font-serif text-2xl text-gold-300 mt-1">Original</dd>
-        </div>
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Transmission</dt>
-          <dd class="font-serif text-2xl text-cream mt-1">Manual</dd>
-        </div>
-      </dl>
+    <!-- Products grid -->
+    <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="reveal reveal-delay-3 mt-10 flex items-end gap-6 flex-wrap">
-        <div>
-          <div class="text-[10px] tracking-[0.3em] text-cream/40 uppercase">Price</div>
-          <div class="font-serif display-lg gold-text leading-none">฿150K</div>
-          <div class="text-cream/50 text-sm mt-1 font-thai">฿150,000</div>
+      <!-- Product 01: ทะเบียนมงคล -->
+      <div class="reveal card-hover rounded-2xl overflow-hidden card-shadow bg-white border border-gold/10">
+        <!-- Gradient image placeholder -->
+        <div class="relative aspect-[4/3] card-plate flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 opacity-30"
+               style="background: radial-gradient(ellipse at 30% 40%, rgba(255,255,255,.2) 0%, transparent 60%);"></div>
+          <!-- Plate display -->
+          <div class="relative z-10 text-center">
+            <div class="bg-white/95 rounded-xl px-8 py-5 shadow-2xl">
+              <div class="font-display font-bold text-4xl text-charcoal tracking-widest">ฐก 455</div>
+              <div class="text-[11px] text-charcoal-soft mt-1.5 font-thai tracking-widest">กรุงเทพมหานคร</div>
+            </div>
+          </div>
+          <!-- Corner ornaments -->
+          <div class="absolute top-3 left-3 w-5 h-5 border-l border-t border-white/40"></div>
+          <div class="absolute top-3 right-3 w-5 h-5 border-r border-t border-white/40"></div>
+          <div class="absolute bottom-3 left-3 w-5 h-5 border-l border-b border-white/40"></div>
+          <div class="absolute bottom-3 right-3 w-5 h-5 border-r border-b border-white/40"></div>
+          <!-- Item number badge -->
+          <div class="absolute top-4 left-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+            <span class="text-white text-[10px] font-medium tracking-[0.2em]">N° 01</span>
+          </div>
         </div>
-        <a href="https://line.me/ti/p/~deelabs" class="inline-flex items-center gap-2 bg-gold-400 text-obsidian px-7 py-3.5 rounded-full text-xs tracking-[0.25em] uppercase font-medium hover:bg-gold-300 transition">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/></svg>
-          Enquire
-        </a>
+        <!-- Content -->
+        <div class="p-7">
+          <div class="section-label mb-2">ทะเบียนมงคล</div>
+          <h3 class="font-display text-xl font-semibold text-charcoal mb-3">เลขศาสตร์รุ่งเรือง ฐก 455</h3>
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed mb-5">
+            ผลรวม 14 ตามตำราโหราศาสตร์ หมายถึงความเจริญรุ่งเรือง การงานก้าวหน้า เสริมบารมีผู้บริหาร
+          </p>
+          <!-- Specs -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">ผลรวม 14</span>
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">หมวด ฐก</span>
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">กรุงเทพฯ</span>
+          </div>
+          <!-- Price + CTA -->
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-[10px] tracking-[0.2em] text-charcoal-muted uppercase mb-1">ราคา</div>
+              <div class="font-display text-2xl font-bold gold-text">฿1.9M</div>
+            </div>
+            <a href="https://line.me/ti/p/~deelabs"
+               class="btn-gold flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/>
+              </svg>
+              สนใจ
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 02: BMW E30 -->
+      <div class="reveal reveal-1 card-hover rounded-2xl overflow-hidden card-shadow bg-white border border-gold/10">
+        <!-- Gradient image placeholder -->
+        <div class="relative aspect-[4/3] card-bmw flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 opacity-30"
+               style="background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,.15) 0%, transparent 60%);"></div>
+          <!-- BMW silhouette lines -->
+          <div class="relative z-10 text-center px-6">
+            <div class="font-display font-bold text-white mb-2" style="font-size: 3rem; letter-spacing: -0.02em;">BMW E30</div>
+            <div class="w-16 h-px bg-gold/60 mx-auto mb-3"></div>
+            <div class="text-white/70 font-thai text-sm tracking-wider">1988 · Classic</div>
+            <div class="mt-4 flex justify-center gap-3 text-[10px] text-white/50 tracking-widest uppercase">
+              <span>Munich</span>
+              <span>·</span>
+              <span>Manual</span>
+              <span>·</span>
+              <span>Original</span>
+            </div>
+          </div>
+          <!-- Corner ornaments -->
+          <div class="absolute top-3 left-3 w-5 h-5 border-l border-t border-white/30"></div>
+          <div class="absolute top-3 right-3 w-5 h-5 border-r border-t border-white/30"></div>
+          <div class="absolute bottom-3 left-3 w-5 h-5 border-l border-b border-white/30"></div>
+          <div class="absolute bottom-3 right-3 w-5 h-5 border-r border-b border-white/30"></div>
+          <div class="absolute top-4 left-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+            <span class="text-white text-[10px] font-medium tracking-[0.2em]">N° 02</span>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="p-7">
+          <div class="section-label mb-2">รถคลาสสิก</div>
+          <h3 class="font-display text-xl font-semibold text-charcoal mb-3">BMW E30 1988 ตำนานแท้</h3>
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed mb-5">
+            รถในตำนานสภาพเดิมจากโรงงาน เครื่องยนต์ไม่เคยยก เอกสารและคู่มือครบชุด สำหรับนักสะสมตัวจริง
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">ปี 1988</span>
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full">Manual</span>
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">เอกสารครบ</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-[10px] tracking-[0.2em] text-charcoal-muted uppercase mb-1">ราคา</div>
+              <div class="font-display text-2xl font-bold gold-text">฿150K</div>
+            </div>
+            <a href="https://line.me/ti/p/~deelabs"
+               class="btn-gold flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/>
+              </svg>
+              สนใจ
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 03: พระสมเด็จ -->
+      <div class="reveal reveal-2 card-hover rounded-2xl overflow-hidden card-shadow bg-white border border-gold/10">
+        <!-- Gradient image placeholder -->
+        <div class="relative aspect-[4/3] card-amulet flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 opacity-40"
+               style="background: radial-gradient(ellipse at 50% 30%, rgba(255,220,130,.3) 0%, transparent 60%);"></div>
+          <!-- Amulet visual -->
+          <div class="relative z-10 text-center">
+            <div class="w-28 h-36 mx-auto rounded-xl border-2 border-gold/60 bg-gradient-to-b from-amber-100/20 to-amber-900/40
+                        flex flex-col items-center justify-center shadow-[0_0_40px_rgba(201,169,110,.4)]">
+              <div class="w-16 h-20 rounded-lg bg-gradient-to-b from-amber-50/30 to-amber-800/20 border border-gold/40
+                          flex items-center justify-center">
+                <span class="font-thai text-white/80 text-xs text-center leading-tight">พระ<br />สมเด็จ</span>
+              </div>
+            </div>
+            <div class="mt-3 text-[11px] text-gold/80 tracking-widest font-thai">วัดปากน้ำ</div>
+          </div>
+          <!-- Corner ornaments -->
+          <div class="absolute top-3 left-3 w-5 h-5 border-l border-t border-gold/40"></div>
+          <div class="absolute top-3 right-3 w-5 h-5 border-r border-t border-gold/40"></div>
+          <div class="absolute bottom-3 left-3 w-5 h-5 border-l border-b border-gold/40"></div>
+          <div class="absolute bottom-3 right-3 w-5 h-5 border-r border-b border-gold/40"></div>
+          <div class="absolute top-4 left-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+            <span class="text-white text-[10px] font-medium tracking-[0.2em]">N° 03</span>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="p-7">
+          <div class="section-label mb-2">พระเครื่อง</div>
+          <h3 class="font-display text-xl font-semibold text-charcoal mb-3">พระสมเด็จ วัดปากน้ำ</h3>
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed mb-5">
+            เลี่ยมทองอย่างดี องค์งามคมชัด พุทธคุณครอบจักรวาล แคล้วคลาด เมตตา โชคลาภ
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">เลี่ยมทอง</span>
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">องค์สวยงาม</span>
+            <span class="bg-gold-pale text-charcoal-soft text-[11px] px-3 py-1 rounded-full font-thai">รับประกันแท้</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-[10px] tracking-[0.2em] text-charcoal-muted uppercase mb-1">ราคา</div>
+              <div class="font-display text-2xl font-bold gold-text">฿75K</div>
+            </div>
+            <a href="https://line.me/ti/p/~deelabs"
+               class="btn-gold flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/>
+              </svg>
+              สนใจ
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCT 03 — AMULET -->
-<section id="p03" class="vh-section relative py-24">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,#1C1C1E_0%,#0A0A0A_65%)]"></div>
-  <div class="relative max-w-[1400px] mx-auto px-6 md:px-10 w-full grid lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-5">
-      <div class="reveal num-tag text-gold-400 text-xs tracking-[0.3em] mb-4">N° 03 / SACRED AMULET</div>
-      <h2 class="reveal reveal-delay-1 font-serif display-lg text-cream">
-        พระสมเด็จ<br /><span class="gold-text italic">วัดปากน้ำ</span>
+
+<!-- ═══════════════════════════════════════════
+     TRUST SIGNALS
+═══════════════════════════════════════════ -->
+<section id="trust" class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <p class="reveal section-label mb-4">ทำไมต้องเชื่อมั่นเรา</p>
+      <h2 class="reveal reveal-1 font-display text-charcoal" style="font-size: clamp(1.8rem, 3.5vw, 2.75rem);">
+        มาตรฐานที่<em class="gold-text not-italic"> ไว้วางใจได้</em>
       </h2>
-      <div class="reveal reveal-delay-1 w-24 h-px bg-gold-400 mt-8"></div>
-      <p class="reveal reveal-delay-2 mt-6 font-thai text-cream/70 leading-relaxed max-w-md">
-        พระสมเด็จวัดปากน้ำภาษีเจริญ เลี่ยมทองอย่างดี องค์งามคมชัด
-        พุทธคุณครอบจักรวาล ทั้งแคล้วคลาด เมตตามหานิยม โชคลาภ
-        สำหรับผู้ศรัทธาในหลวงพ่อสด
-      </p>
+    </div>
 
-      <dl class="reveal reveal-delay-2 mt-10 grid grid-cols-2 gap-px bg-gold-600/20 gold-frame rounded">
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Frame</dt>
-          <dd class="font-serif text-2xl text-gold-300 mt-1">Gold</dd>
+    <!-- Trust grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="reveal text-center">
+        <div class="trust-icon mx-auto mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+               stroke="#C9A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
         </div>
-        <div class="bg-obsidian p-5">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Condition</dt>
-          <dd class="font-serif text-2xl text-cream mt-1">Mint</dd>
-        </div>
-        <div class="bg-obsidian p-5 col-span-2">
-          <dt class="text-[10px] tracking-[0.25em] text-cream/40 uppercase">Certificate</dt>
-          <dd class="font-serif text-xl text-cream mt-1 flex items-center gap-2">
-            <i data-lucide="badge-check" class="w-5 h-5 text-gold-300"></i> รับประกันแท้ · คืนเงินได้
-          </dd>
-        </div>
-      </dl>
+        <h4 class="font-display font-semibold text-charcoal text-lg mb-2">รับประกันแท้</h4>
+        <p class="font-thai text-charcoal-soft text-sm leading-relaxed">ตรวจสอบโดยผู้เชี่ยวชาญ พร้อมเอกสารรับรองทุกชิ้น</p>
+      </div>
 
-      <div class="reveal reveal-delay-3 mt-10 flex items-end gap-6 flex-wrap">
-        <div>
-          <div class="text-[10px] tracking-[0.3em] text-cream/40 uppercase">Price</div>
-          <div class="font-serif display-lg gold-text leading-none">฿75K</div>
-          <div class="text-cream/50 text-sm mt-1 font-thai">฿75,000</div>
+      <div class="reveal reveal-1 text-center">
+        <div class="trust-icon mx-auto mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+               stroke="#C9A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12h18M3 6h18M3 18h18"/>
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
         </div>
-        <a href="https://line.me/ti/p/~deelabs" class="inline-flex items-center gap-2 bg-gold-400 text-obsidian px-7 py-3.5 rounded-full text-xs tracking-[0.25em] uppercase font-medium hover:bg-gold-300 transition">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/></svg>
-          Enquire
-        </a>
+        <h4 class="font-display font-semibold text-charcoal text-lg mb-2">คืนเงินได้</h4>
+        <p class="font-thai text-charcoal-soft text-sm leading-relaxed">หากตรวจสอบแล้วไม่ใช่ของแท้ ยินดีคืนเงินเต็มจำนวน</p>
+      </div>
+
+      <div class="reveal reveal-2 text-center">
+        <div class="trust-icon mx-auto mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+               stroke="#C9A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h4 class="font-display font-semibold text-charcoal text-lg mb-2">นัดชมได้</h4>
+        <p class="font-thai text-charcoal-soft text-sm leading-relaxed">นัดชมของจริงก่อนตัดสินใจ ไม่มีค่าใช้จ่าย</p>
+      </div>
+
+      <div class="reveal reveal-3 text-center">
+        <div class="trust-icon mx-auto mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+               stroke="#C9A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h4 class="font-display font-semibold text-charcoal text-lg mb-2">ตอบเร็ว</h4>
+        <p class="font-thai text-charcoal-soft text-sm leading-relaxed">ตอบ LINE ภายใน 30 นาที ทุกวันตั้งแต่ 9.00–21.00 น.</p>
       </div>
     </div>
 
-    <div class="lg:col-span-7 product-stage">
-      <div class="reveal reveal-delay-2 relative aspect-[5/4] zoom-wrap">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#2a2013_0%,#0A0A0A_75%)] rounded"></div>
-        <!-- real photo from Wikimedia Commons (CC BY-SA) — Phra Somdej Wat Rakang (representative) -->
-        <div class="absolute inset-0 flex items-center justify-center zoom-target">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Somdej_Wat_Rakang_2411.jpg"
-               alt="พระสมเด็จ — Sacred Thai Amulet"
-               loading="lazy"
-               class="h-[80%] w-auto object-contain rounded-lg shadow-[0_20px_80px_-10px_rgba(201,169,110,.6)]" />
+    <!-- Testimonial strip -->
+    <div class="reveal mt-20 bg-white rounded-2xl card-shadow p-8 md:p-10">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="font-display text-5xl font-bold gold-text mb-2">15+</div>
+          <div class="font-thai text-charcoal-soft text-sm">ปีประสบการณ์ในวงการของสะสม</div>
         </div>
-        <div class="absolute inset-10 gold-frame rounded pointer-events-none"></div>
-        <div class="absolute top-4 left-4 w-6 h-6 border-l border-t border-gold-400"></div>
-        <div class="absolute top-4 right-4 w-6 h-6 border-r border-t border-gold-400"></div>
-        <div class="absolute bottom-4 left-4 w-6 h-6 border-l border-b border-gold-400"></div>
-        <div class="absolute bottom-4 right-4 w-6 h-6 border-r border-b border-gold-400"></div>
-      </div>
-      <div class="reveal reveal-delay-3 mt-4 flex justify-between text-[10px] tracking-[0.25em] text-cream/40 uppercase">
-        <span>Wat Paknam · Bangkok</span>
-        <span>Certified Authentic</span>
+        <div class="text-center border-y md:border-y-0 md:border-x border-gold/20 py-8 md:py-0">
+          <div class="font-display text-5xl font-bold gold-text mb-2">500+</div>
+          <div class="font-thai text-charcoal-soft text-sm">ชิ้นงานที่ผ่านมือเราแล้ว</div>
+        </div>
+        <div class="text-center">
+          <div class="font-display text-5xl font-bold gold-text mb-2">100%</div>
+          <div class="font-thai text-charcoal-soft text-sm">ลูกค้าพึงพอใจและกลับมาซื้อซ้ำ</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="relative py-28 border-t border-gold-600/20">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1C1C1E_0%,#0A0A0A_70%)]"></div>
-  <div class="relative max-w-4xl mx-auto px-6 md:px-10 text-center">
-    <div class="reveal ornament mb-8 tracking-[0.3em] text-xs uppercase">
-      <span>Private Enquiry</span>
+
+<!-- ═══════════════════════════════════════════
+     HOW TO BUY
+═══════════════════════════════════════════ -->
+<section id="how-to-buy" class="py-24 md:py-32 px-5 md:px-8 bg-charcoal">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="reveal section-label mb-4 text-gold/70">ขั้นตอนการซื้อ</p>
+      <h2 class="reveal reveal-1 font-display text-white" style="font-size: clamp(1.8rem, 3.5vw, 2.75rem);">
+        ง่าย ปลอดภัย <em class="gold-text not-italic">ใน 3 ขั้นตอน</em>
+      </h2>
     </div>
-    <h2 class="reveal reveal-delay-1 font-serif display-lg text-cream">
-      ติดต่อ<span class="gold-text italic">โดยตรง</span>
+
+    <!-- Steps -->
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12 relative">
+      <!-- Connector line (desktop) -->
+      <div class="hidden md:block absolute top-7 left-[16.7%] right-[16.7%] h-px border-t border-dashed border-gold/30"></div>
+
+      <!-- Step 1 -->
+      <div class="reveal text-center">
+        <div class="flex justify-center mb-6">
+          <div class="step-num border-gold">01</div>
+        </div>
+        <h4 class="font-display text-xl font-semibold text-white mb-3">ติดต่อสอบถาม</h4>
+        <p class="font-thai text-white/60 text-sm leading-relaxed">
+          ทักแชท LINE หรือโทรหาเรา บอกชิ้นที่สนใจ เราจะส่งรายละเอียดและรูปภาพเพิ่มเติมให้ทันที
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="reveal reveal-1 text-center">
+        <div class="flex justify-center mb-6">
+          <div class="step-num">02</div>
+        </div>
+        <h4 class="font-display text-xl font-semibold text-white mb-3">นัดชมของจริง</h4>
+        <p class="font-thai text-white/60 text-sm leading-relaxed">
+          นัดหมายเพื่อตรวจสอบของจริงด้วยตนเอง หรือให้ผู้เชี่ยวชาญตรวจสอบแทน รับประกันความแท้ก่อนชำระเงิน
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="reveal reveal-2 text-center">
+        <div class="flex justify-center mb-6">
+          <div class="step-num">03</div>
+        </div>
+        <h4 class="font-display text-xl font-semibold text-white mb-3">โอนเงิน &amp; รับของ</h4>
+        <p class="font-thai text-white/60 text-sm leading-relaxed">
+          ชำระเงินผ่านช่องทางที่สะดวก รับของพร้อมเอกสารรับรองและใบเสร็จอย่างเป็นทางการ
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal text-center mt-16">
+      <a href="https://line.me/ti/p/~deelabs"
+         class="inline-flex items-center gap-3 bg-line text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-green-500 transition-colors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/>
+        </svg>
+        เริ่มสอบถามทาง LINE ได้เลย
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════ -->
+<section id="faq" class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-2xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="reveal section-label mb-4">คำถามที่พบบ่อย</p>
+      <h2 class="reveal reveal-1 font-display text-charcoal" style="font-size: clamp(1.8rem, 3.5vw, 2.75rem);">
+        มีคำถาม<em class="gold-text not-italic"> ถามเลย</em>
+      </h2>
+    </div>
+
+    <!-- FAQ items -->
+    <div class="reveal reveal-1 space-y-3">
+
+      <div class="faq-item bg-white rounded-xl card-shadow border border-gold/10 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-medium text-charcoal text-base pr-4">ของแท้ 100% จริงหรือเปล่า?</span>
+          <span class="faq-icon text-gold flex-shrink-0 text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed px-6 pb-6">
+            ใช่ครับ ทุกชิ้นผ่านการตรวจสอบโดยผู้เชี่ยวชาญและมีเอกสารรับรองความแท้จริง
+            หากพบว่าไม่ใช่ของแท้ เรายินดีคืนเงินเต็มจำนวนโดยไม่มีข้อแม้ใดๆ
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-xl card-shadow border border-gold/10 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-medium text-charcoal text-base pr-4">ต่อรองราคาได้ไหม?</span>
+          <span class="faq-icon text-gold flex-shrink-0 text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed px-6 pb-6">
+            ราคาที่แสดงเป็นราคาขาย ซึ่งเราตั้งไว้อย่างสมเหตุสมผลตามมูลค่าตลาด
+            สำหรับผู้ที่สนใจซื้อหลายชิ้น หรือชำระเป็นเงินสด อาจมีส่วนลดพิเศษ ติดต่อสอบถามได้โดยตรง
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-xl card-shadow border border-gold/10 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-medium text-charcoal text-base pr-4">ชำระเงินผ่านช่องทางอะไรได้บ้าง?</span>
+          <span class="faq-icon text-gold flex-shrink-0 text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed px-6 pb-6">
+            รับชำระเงินผ่านการโอนผ่านธนาคาร, PromptPay, และเงินสด
+            หากต้องการชำระด้วยวิธีอื่น กรุณาสอบถามล่วงหน้า
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-xl card-shadow border border-gold/10 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-medium text-charcoal text-base pr-4">ส่งของได้ไหม หรือต้องมารับเอง?</span>
+          <span class="faq-icon text-gold flex-shrink-0 text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed px-6 pb-6">
+            สำหรับของมีมูลค่าสูง แนะนำให้มารับเองหรือให้ตัวแทนรับแทน
+            หากต้องการจัดส่ง สามารถใช้บริการขนส่งแบบรับประกัน (insured shipping) ได้
+            โดยค่าขนส่งและประกันเป็นค่าใช้จ่ายของผู้ซื้อ
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-xl card-shadow border border-gold/10 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-medium text-charcoal text-base pr-4">โอนเงินแล้วไม่ได้ของจะทำอย่างไร?</span>
+          <span class="faq-icon text-gold flex-shrink-0 text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="font-thai text-charcoal-soft text-sm leading-relaxed px-6 pb-6">
+            เราดำเนินธุรกิจด้วยความซื่อสัตย์มาหลายปี มีหลักฐานยืนยันตัวตนและที่อยู่ชัดเจน
+            ทุกธุรกรรมมีใบเสร็จอย่างเป็นทางการ คุณสามารถนัดรับของก่อนชำระเงินก็ได้
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CONTACT CTA
+═══════════════════════════════════════════ -->
+<section id="contact" class="py-24 md:py-32 px-5 md:px-8 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="reveal section-label mb-4">ติดต่อเราวันนี้</p>
+    <h2 class="reveal reveal-1 font-display text-charcoal mb-6" style="font-size: clamp(2rem, 4vw, 3.25rem);">
+      สนใจชิ้นไหน<br />
+      <em class="gold-text not-italic">ทักมาได้เลย</em>
     </h2>
-    <p class="reveal reveal-delay-2 mt-6 font-thai text-cream/70 max-w-xl mx-auto">
-      สนใจสินค้าชิ้นใดเป็นพิเศษ กรุณาติดต่อเพื่อนัดชมของจริง<br />
-      หรือสอบถามรายละเอียดเพิ่มเติมผ่านช่องทางด้านล่าง
+    <p class="reveal reveal-2 font-thai text-charcoal-soft text-lg max-w-lg mx-auto leading-relaxed mb-14">
+      ทีมงานพร้อมตอบทุกคำถาม นัดชมของจริง และดูแลคุณตลอดกระบวนการซื้อขาย
     </p>
 
-    <div class="reveal reveal-delay-2 mt-12 grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
-      <a href="https://line.me/ti/p/~deelabs" class="group gold-frame-strong rounded p-8 hover:bg-gold-400 hover:text-obsidian transition-all">
-        <div class="flex items-center justify-center w-14 h-14 mx-auto rounded-full bg-line text-white group-hover:scale-110 transition">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/></svg>
+    <!-- Contact cards -->
+    <div class="reveal reveal-2 grid sm:grid-cols-2 gap-6 max-w-xl mx-auto mb-12">
+      <!-- LINE -->
+      <a href="https://line.me/ti/p/~deelabs"
+         class="group bg-warm border border-gold/20 rounded-2xl p-8 card-shadow hover:border-gold/50 hover:shadow-lg transition-all">
+        <div class="w-16 h-16 mx-auto rounded-full bg-line flex items-center justify-center mb-5
+                    group-hover:scale-110 transition-transform">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/>
+          </svg>
         </div>
-        <div class="mt-5 text-[10px] tracking-[0.3em] uppercase text-gold-400 group-hover:text-obsidian/70">LINE Official</div>
-        <div class="font-serif text-3xl text-cream group-hover:text-obsidian mt-2">@deelabs</div>
-        <div class="font-thai text-sm text-cream/50 group-hover:text-obsidian/60 mt-1">ตอบเร็วที่สุด</div>
+        <div class="section-label mb-2">LINE Official</div>
+        <div class="font-display text-2xl font-semibold text-charcoal mb-1">@deelabs</div>
+        <div class="font-thai text-charcoal-soft text-sm">ตอบเร็วที่สุด · ทุกวัน</div>
       </a>
-      <a href="tel:0812345678" class="group gold-frame-strong rounded p-8 hover:bg-gold-400 hover:text-obsidian transition-all">
-        <div class="flex items-center justify-center w-14 h-14 mx-auto rounded-full bg-cream text-obsidian group-hover:scale-110 transition">
-          <i data-lucide="phone" class="w-7 h-7"></i>
+
+      <!-- Phone -->
+      <a href="tel:0812345678"
+         class="group bg-warm border border-gold/20 rounded-2xl p-8 card-shadow hover:border-gold/50 hover:shadow-lg transition-all">
+        <div class="w-16 h-16 mx-auto rounded-full bg-charcoal flex items-center justify-center mb-5
+                    group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+               stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.27 6.27l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
         </div>
-        <div class="mt-5 text-[10px] tracking-[0.3em] uppercase text-gold-400 group-hover:text-obsidian/70">Direct Call</div>
-        <div class="font-serif text-3xl text-cream group-hover:text-obsidian mt-2">081 234 5678</div>
-        <div class="font-thai text-sm text-cream/50 group-hover:text-obsidian/60 mt-1">9:00 — 21:00 น. ทุกวัน</div>
+        <div class="section-label mb-2">โทรศัพท์</div>
+        <div class="font-display text-2xl font-semibold text-charcoal mb-1">081 234 5678</div>
+        <div class="font-thai text-charcoal-soft text-sm">9.00 – 21.00 น. ทุกวัน</div>
       </a>
     </div>
 
-    <div class="reveal reveal-delay-3 mt-16 gold-line h-px w-full max-w-md mx-auto"></div>
-    <p class="reveal reveal-delay-3 mt-6 font-serif italic text-gold-300/80 text-lg">
-      "Quality is remembered long after the price is forgotten."
-    </p>
+    <!-- Quote -->
+    <div class="reveal reveal-3">
+      <div class="gold-divider max-w-48 mx-auto mb-6"></div>
+      <p class="font-display italic text-charcoal-soft text-xl">
+        "ของดีรอเจ้าของที่ใช่"
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="py-10 border-t border-gold-600/15 bg-obsidian">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="py-8 border-t border-gold/15 bg-charcoal">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
     <div class="flex items-center gap-3">
-      <div class="w-8 h-8 gold-frame-strong rounded-full flex items-center justify-center">
-        <span class="font-serif italic text-gold-300">M</span>
+      <div class="w-8 h-8 border border-gold/40 rounded-full flex items-center justify-center">
+        <span class="font-display italic text-gold text-sm">T</span>
       </div>
-      <div class="font-serif tracking-[0.25em] text-cream">MONGKOL · THE COLLECTION</div>
+      <span class="font-display text-white/80 tracking-[0.2em] text-sm">THE COLLECTION</span>
     </div>
-    <div class="tracking-[0.25em] uppercase text-cream/40">© 2026 · All Rights Reserved</div>
-    <div class="flex items-center gap-4 text-cream/60">
-      <a href="https://line.me/ti/p/~deelabs" class="hover:text-gold-300 transition tracking-[0.2em] uppercase">LINE</a>
-      <span class="text-gold-600">·</span>
-      <a href="tel:0812345678" class="hover:text-gold-300 transition tracking-[0.2em] uppercase">Call</a>
+    <div class="text-[11px] tracking-[0.2em] text-white/30 uppercase">© 2026 · All Rights Reserved</div>
+    <div class="flex items-center gap-5 text-[11px] tracking-[0.2em] text-white/50 uppercase">
+      <a href="https://line.me/ti/p/~deelabs" class="hover:text-gold transition-colors">LINE</a>
+      <span class="text-gold/30">·</span>
+      <a href="tel:0812345678" class="hover:text-gold transition-colors">โทร</a>
     </div>
   </div>
 </footer>
 
-<!-- STICKY CTA on mobile -->
-<div class="md:hidden fixed bottom-4 left-4 right-4 z-40 flex gap-2">
-  <a href="https://line.me/ti/p/~deelabs" class="flex-1 inline-flex items-center justify-center gap-2 bg-line text-white px-4 py-3.5 rounded-full text-xs tracking-[0.2em] uppercase font-medium shadow-2xl">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/></svg>
-    LINE
+
+<!-- ═══════════════════════════════════════════
+     FLOATING BUTTONS
+═══════════════════════════════════════════ -->
+<!-- Mobile: bottom bar -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 flex bg-white border-t border-gold/15 shadow-[0_-4px_24px_rgba(0,0,0,.1)]">
+  <a href="https://line.me/ti/p/~deelabs"
+     class="flex-1 flex items-center justify-center gap-2 bg-line text-white py-4 text-sm font-semibold">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/>
+    </svg>
+    <span class="font-thai">ทัก LINE</span>
   </a>
-  <a href="tel:0812345678" class="flex-1 inline-flex items-center justify-center gap-2 bg-gold-400 text-obsidian px-4 py-3.5 rounded-full text-xs tracking-[0.2em] uppercase font-medium shadow-2xl">
-    <i data-lucide="phone" class="w-4 h-4"></i>
-    Call
+  <a href="tel:0812345678"
+     class="flex-1 flex items-center justify-center gap-2 bg-gold text-white py-4 text-sm font-semibold">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.27 6.27l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    <span class="font-thai">โทรหาเรา</span>
   </a>
 </div>
 
-<!-- Floating enquire on desktop -->
-<a href="https://line.me/ti/p/~deelabs" class="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-2 bg-gold-400 text-obsidian px-6 py-3.5 rounded-full text-xs tracking-[0.25em] uppercase font-medium shadow-2xl hover:bg-gold-300 transition">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/></svg>
-  Enquire via LINE
-</a>
+<!-- Desktop: floating stack -->
+<div class="hidden md:flex fixed bottom-8 right-8 z-50 flex-col gap-3">
+  <a href="https://line.me/ti/p/~deelabs"
+     class="float-btn flex items-center gap-2.5 bg-line text-white px-5 py-3 rounded-full text-sm font-semibold shadow-lg">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 5.66 2 10.18c0 2.88 1.86 5.42 4.7 6.89-.2.72-.74 2.64-.85 3.05-.13.52.19.52.4.38.17-.11 2.7-1.84 3.78-2.58.64.09 1.3.14 1.97.14 5.52 0 10-3.66 10-8.18S17.52 2 12 2z"/>
+    </svg>
+    LINE
+  </a>
+  <a href="tel:0812345678"
+     class="float-btn flex items-center gap-2.5 bg-charcoal text-white px-5 py-3 rounded-full text-sm font-semibold shadow-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.27 6.27l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    081 234 5678
+  </a>
+</div>
 
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
 <script>
-  lucide.createIcons();
-
   // Scroll reveal
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-answer').classList.remove('open');
+      });
+
+      // Open clicked if was closed
+      if (!isOpen) {
+        item.classList.add('active');
+        answer.classList.add('open');
+      }
+    });
+  });
+
+  // Nav scroll effect
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.style.boxShadow = '0 4px 24px rgba(0,0,0,.08)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  });
+
+  // Mobile bottom bar padding for last section
+  if (window.innerWidth < 768) {
+    document.querySelector('footer').style.paddingBottom = '80px';
+  }
 </script>
 </body>
 </html>
